@@ -1,0 +1,30 @@
+on :
+Push
+inputs:
+  desctription:who-all-to-greet
+  required: true
+  default:
+
+Outputs:
+
+description: sample desc
+value: ${{steps.random-number-genrator.output.random-number}}
+runs:
+using: "Composite"
+steps:
+  -name: greetings
+  -run: resolve.path(path/to/scriptfile)
+  -run: npm build and install
+  -run: echo "hello world"
+
+
+  $INPUT_TO_Greet
+  env:
+  INput_to_greet: ${{inputs.who_to_greet}}
+  run: "sample file"
+  shell:Bash
+  
+
+  {{secre.GITHUB_TOKEN}}
+
+
